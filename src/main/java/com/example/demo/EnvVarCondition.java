@@ -7,11 +7,11 @@ public class EnvVarCondition {
     @Test
     @EnabledIfEnvironmentVariable(named = "ENV", matches = "staging-server")
     void onlyOnStagingServer() {
-        // ...
+        System.out.println("onlyOnStagingServer");
     }
     @Test
     @DisabledIfEnvironmentVariable(named = "ENV", matches = ".*development.*")
     void notOnDeveloperWorkstation() {
-        // ...
+        System.out.println("notOnDeveloperWorkstation");
     }
 }
